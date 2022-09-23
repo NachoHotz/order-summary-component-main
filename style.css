@@ -1,0 +1,176 @@
+:root {
+  /*  */
+  --var-pale-blue: hsl(225, 100%, 94%);
+  --var-bright-blue: hsl(245, 75%, 52%);
+  --var-very-pale-blue: hsl(225, 100%, 98%);
+  --var-desaturated-blue: hsl(224, 23%, 55%);
+  --var-dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+p {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  padding-inline: 2rem;
+  color: gray;
+}
+
+h2 {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 900;
+}
+
+h4 {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 700;
+}
+
+button {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 700;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+body {
+  background-image: url('./images/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-color: var(--var-pale-blue);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+  border-radius: 1rem;
+  width: 28rem;
+}
+
+.img-container {
+  width: inherit;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  height: 13.5rem;
+  background-image: url('./images/illustration-hero.svg');
+}
+
+.order-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  padding-inline: 2rem;
+}
+
+.order-container h2 {
+  margin-bottom: 1rem;
+}
+
+.checkout {
+  border-radius: .5rem;
+  background-color: var(--var-very-pale-blue);
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  width: 20rem;
+  padding: 1rem;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.payment-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.payment-info span {
+  margin-right: .5rem;
+}
+
+.checkout #change-plan-btn {
+  border: 0px;
+  background-color: inherit;
+  color: var(--var-bright-blue);
+  text-decoration: underline;
+  font-size: 15px;
+}
+
+.checkout-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.checkout-btn #proceed-btn {
+  border: 0px;
+  border-radius: .5rem;
+  width: 22rem;
+  background-color: var(--var-bright-blue);
+  font-weight: bold;
+  color: white;
+  padding: 1rem;
+}
+
+#proceed-btn:hover {
+  cursor: pointer;
+  background-color: var(--var-bright-blue);
+}
+
+.checkout-btn #cancel-btn {
+  border: 0px;
+  background-color: white;
+  border-radius: .5rem;
+  font-weight: bolder;
+  color: gray;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+#cancel-btn:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.attribution {
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 375px) {
+  .card-container {
+    width: 25rem;
+  }
+
+  .checkout {
+    width: 20rem;
+  }
+
+  .checkout-btn #proceed-btn {
+    width: 17rem;
+  }
+}
